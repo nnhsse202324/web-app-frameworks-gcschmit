@@ -24,17 +24,23 @@ let x;
 
 /**
  * variable assignment:
- *  may be done after variable declaration or at same time
+ *  may be done after variable declaration or at the same time
  */
 x = 7;
+console.log(x);
+x = 11;
+console.log(x);
 
 /**
  * constants (immutable value):
  *  use the keyword "const"
  *  similar to the final keyword in Java
  *  may be initialized at the same time as declaration or later
+ *  use all uppercase letters for constants assigned to literals
+ *  use camelCase for constants assigned to expressions
  */
 const HOSTNAME = "localhost";
+console.log(HOSTNAME);
 
 /**
  * var keyword:
@@ -43,10 +49,12 @@ const HOSTNAME = "localhost";
  *  rarely used in modern Javascript
  */
 var y = 11;
+console.log(y);
 
 /**********************************************************
  * Primitive Types
  **********************************************************/
+
 /**
  * Number
  *  represents both integer and floating-point values
@@ -78,7 +86,7 @@ console.log(typeof a);
 /**
  * null
  *  a primitive type with only one value: null
- *  represent nothing, empty, or unknown
+ *  represents nothing, empty, or unknown
  *  not like a reference to a non-existent object like in Java
  */
 a = null;
@@ -121,4 +129,31 @@ if ("34" == 34) {
 
 if (3 != true) {
   console.log("true is converted to 1 and then compared to 3");
+}
+
+/**
+ * the strict equality operator (===) does not perform type coercion;
+ *  returns false if the types are different
+ *  most similar to Java's == operator
+ * recommended to use this operator instead of the equality operator (==)
+ */
+if ("34" === 34) {
+  // not equal because they are different types
+} else {
+  console.log(
+    "'34' is not strictly equal to 34 because they are different types"
+  );
+
+  /**
+   * Recommendations regarding null and undefined:
+   *  only use the strict equality and inequality operators (===, !==)
+   * comparison and the equality operator will, most likely, return
+   *  unexpected results
+   */
+  if (a === null) {
+    console.log("a is null");
+  }
+  if (c === undefined) {
+    console.log("c is undefined");
+  }
 }
