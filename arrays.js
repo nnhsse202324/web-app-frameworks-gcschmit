@@ -68,3 +68,7 @@ console.log(fruitObjects.map((item) => item.name));
  *  indexOf, includes, find, and filter;
  *  sort, split, join, and reduce
  */
+
+// warmup
+let x = ["a", "b", "c"];
+let y = x.map((item) => ({ letter: item }));

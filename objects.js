@@ -17,16 +17,21 @@ let journalEntry = new Object();
 journalEntry = {};
 
 // create an object with properties (key-value pairs) in JSON format
+//  objects may contain methods
 journalEntry = {
   date: "2023-11-10",
   habitOfMind: "Applying Past Knowledge to New Situations",
   content:
     "By comparing and contrasting JavaScript objects to Java objects, " +
     "I am strengthening my understanding",
+  getLength() {
+    return this.content.length; // this refers to the object, similar to Java
+  },
 };
 
 console.log(journalEntry);
 console.log(typeof journalEntry);
+console.log(journalEntry.getLength());
 
 /**
  * Accessing properties
