@@ -70,5 +70,6 @@ console.log(fruitObjects.map((item) => item.name));
  */
 
 // warmup
-let x = ["a", "b", "c"];
-let y = x.map((item) => ({ letter: item }));
+const x = ["a", "b", "c"];
+const y = x.map((item) => ({ letter: item }));
+console.log(y);
